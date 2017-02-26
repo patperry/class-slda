@@ -272,8 +272,8 @@ void slda::random_initialize_ss(suffstats * ss, corpus* c)
 {
     int num_docs = ss->num_docs;
     gsl_rng * rng = gsl_rng_alloc(gsl_rng_taus);
-    time_t seed;
-    time(&seed);
+    time_t seed = 0;
+    //time(&seed);
     gsl_rng_set(rng, (long) seed);
     int k, w, d, j, idx;
     for (k = 0; k < num_topics; k++)
@@ -324,8 +324,8 @@ void slda::corpus_initialize_ss(suffstats* ss, corpus* c)
 {
     int num_docs = ss->num_docs;
     gsl_rng * rng = gsl_rng_alloc(gsl_rng_taus);
-    time_t seed;
-    time(&seed);
+    time_t seed = 0;
+    //time(&seed);
     gsl_rng_set(rng, (long) seed);
     int k, n, d, j, idx, i, w;
 
