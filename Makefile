@@ -1,5 +1,5 @@
-CC = g++
-LDFLAGS = -lgsl -lm -lgslcblas
+CC = g++ `pkg-config --cflags gsl`
+LDFLAGS = `pkg-config --libs gsl`
 
 
 LSOURCE = main.cpp corpus.cpp slda.cpp utils.cpp opt.cpp
